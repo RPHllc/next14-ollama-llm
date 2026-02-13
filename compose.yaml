@@ -11,15 +11,3 @@ services:
     environment:
       - NODE_ENV=development
       - NEXT_PUBLIC_OLLAMA_URL=${NEXT_PUBLIC_OLLAMA_URL}
-    develop:
-      watch:
-        - action: sync
-          src: .
-          dest: /app
-          ignore:
-            - node_modules/
-            - .next/
-          path: .
-          target: app
-        - action: rebuild
-          path: ./package.json
